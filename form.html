@@ -1,0 +1,24 @@
+<!-- ## 29. Forms + HTTP fundamentals -->
+<!-- On submit, a form constructs a request from successful named controls. GET places encoded data in the URL; POST normally sends it in the request body. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/login" method="post">
+        <input name="email" type="email" required>
+        <input name="password" type="password" required>
+        <button>Log in</button>
+    </form>
+</body>
+
+</html>
+
+<!-- **Example:** A search form uses `method="get"` so its query can be bookmarked; a login form uses POST because credentials should not be placed in the URL. -->
+<!-- **Use / do not use:** Use correct `action`, method, names, and server-side validation. Use HTTPS for sensitive submissions. Do not put secrets in query strings or assume client validation is security. -->
+<!-- **Write yourself:** Build a search form and a profile-update form. Inspect the resulting URL/request and explain every field sent. -->

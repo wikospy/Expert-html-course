@@ -1,0 +1,18 @@
+<!-- ## 21. Advanced accessibility -->
+<!-- An accessible name is what assistive technology announces for a control. Roles describe what a widget is; states and properties describe its current condition or relationships. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button aria-expanded="false" aria-controls="faq-answer">Question</button>
+    <div id="faq-answer" hidden>Answer</div> 
+</body>
+</html>
+
+<!-- **Example:** A disclosure button updates `aria-expanded` and visibility together, while focus remains predictable. -->
+<!-- **Use / do not use:** Prefer native `button`, `details`, inputs, and headings. Manage focus when opening dialogs or changing views. Do not invent ARIA roles when native HTML already supplies the behavior. -->
+<!-- **Write yourself:** Implement an accessible disclosure with keyboard operation, synchronized state, and focus behavior. Test it with Tab, Enter, and Space. -->

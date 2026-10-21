@@ -1,0 +1,26 @@
+<!-- ## 23. Responsive images -->
+<!-- The browser can choose an image candidate based on viewport size and pixel density. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <picture>
+        <source media="(min-width: 900px)" srcset="hero-wide.jpg">
+        <source srcset="hero-small.jpg">
+        <img src="hero-small.jpg" srcset="hero-small.jpg 480w, hero-large.jpg 1200w"
+            sizes="(min-width: 900px) 50vw, 100vw" alt="Mountain trail">
+    </picture>
+</body>
+
+</html>
+
+
+<!-- **Example:** A phone downloads a smaller crop while a desktop gets a wide image. -->
+<!-- **Use / do not use:** Use `picture` for art direction and `srcset`/`sizes` for resolution selection. Keep meaningful alt text on the fallback `img`. Do not send the largest image to every device. -->
+<!-- **Write yourself:** Create a responsive hero with two art-directed crops and three width candidates. Write why `sizes` matches your layout. -->

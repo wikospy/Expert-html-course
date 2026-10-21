@@ -1,0 +1,21 @@
+<!-- ## 28. HTML parsing -->
+<!-- Classic scripts pause parsing at their location. `defer` downloads in parallel and executes after parsing in document order. `async` downloads in parallel and executes as soon as ready, with no order guarantee. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="analytics.js" async></script>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
+
+<!-- **Example:** Independent analytics can be `async`; an app that depends on parsed markup and ordered modules can be `defer`. -->
+<!-- **Use / do not use:** Choose based on dependency and timing, not habit. Do not use `async` for scripts that depend on one another or on DOM order. -->
+<!-- **Write yourself:** Create three pages, one with each loading strategy, and use logging to describe parse and execution order. -->

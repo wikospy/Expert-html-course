@@ -1,0 +1,25 @@
+<!-- ## 20. DOM structure -->
+<!-- Elements are nodes, but nodes also include text and comments. Parent, child, sibling, ancestor, and descendant describe relationships in the tree. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Docs</li>
+    </ul>
+</body>
+
+</html>
+
+
+<!-- The `ul` is the parent; each `li` is a child and sibling of the other `li`. -->
+<!-- **Example:** Event delegation attaches one listener to `ul` and checks which descendant was clicked. -->
+<!-- **Use / do not use:** Use relationships to traverse or delegate events. Do not assume whitespace is absent: text nodes can exist between elements. -->
+<!-- **Write yourself:** Draw the DOM tree for a small article, labeling element nodes, text nodes, parents, children, and siblings. -->

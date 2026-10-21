@@ -1,0 +1,22 @@
+<!-- ## 26. Security-related HTML -->
+<!-- HTML can create security boundaries, but it cannot make untrusted content safe by itself. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://external.example" target="_blank" rel="noopener noreferrer">External site</a>
+    <iframe src="/untrusted-widget" sandbox="allow-scripts"></iframe>
+</body>
+
+</html>
+
+
+<!-- **Example:** `noopener` prevents a new page from controlling the opener; escaping text before inserting it prevents markup injection. -->
+<!-- **Use / do not use:** Treat user-controlled HTML as hostile, sanitize it with a trusted sanitizer when HTML is required, and prefer text insertion APIs. Do not use `innerHTML` with unsanitized input or assume `sandbox` solves every data leak. -->
+<!-- **Write yourself:** Make a threat checklist for a comment preview, external links, and an embedded widget. Identify the trust boundary and the safe handling method for each. -->

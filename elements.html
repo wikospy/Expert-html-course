@@ -1,0 +1,32 @@
+<!-- ## 25. Modern HTML APIs/elements -->
+<!-- `dialog` supports modal/non-modal dialogs; `details` and `summary` provide disclosure; `template` stores inert markup; `slot` defines insertion points in Web Components. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <details>
+        <summary>Shipping information</summary>
+        <p>Ships in 2 days.</p>
+    </details>
+    <dialog id="help">
+        <p>Help text</p><button autofocus>Close</button>
+    </dialog>
+    <template id="card-template">
+        <article>
+            <slot name="title"></slot>
+        </article>
+    </template>
+</body>
+
+</html>
+
+
+<!-- **Example:** FAQ content uses `details`; a confirmation prompt uses `dialog`; a custom card uses a template and slot. -->
+<!-- **Use / do not use:** Use native disclosure and dialog behavior where it fits. Do not use a dialog as a substitute for ordinary page content or build a custom element before understanding its accessibility contract. -->
+<!-- **Write yourself:** Build an FAQ with `details`, a dialog that opens and closes correctly, and a template you clone with JavaScript. -->

@@ -1,0 +1,26 @@
+<!-- ## 19. DOM understanding -->
+<!-- The browser parses HTML source into a DOM, builds a CSSOM from CSS, combines them into a render tree, then performs layout and paint. JavaScript can read and modify the DOM; a DOM change may trigger style calculation, layout, and painting. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="save">Save</button>
+    <script>
+        document.querySelector("#save").addEventListener("click", () => {
+            document.body.dataset.saved = "true";
+        });
+    </script>
+</body>
+
+</html>
+
+
+<!-- **Example:** A button event changes state in the DOM; CSS can react to the `data-saved` attribute. -->
+<!-- **Use / do not use:** Understand this pipeline when debugging timing or performance. Do not repeatedly force layout by reading geometry immediately after many writes. -->
+<!-- **Write yourself:** Build a counter with a button and explain, in your own words, which DOM node changes after each click. -->

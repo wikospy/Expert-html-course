@@ -1,0 +1,22 @@
+<!-- ## 27. Performance -->
+<!-- HTML performance choices affect network cost, rendering, and interaction. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+</body>
+<link rel="preconnect" href="https://cdn.example">
+<img src="photo.jpg" loading="lazy" decoding="async" width="800" height="600" alt="...">
+<script src="app.js" defer></script>
+
+<body>
+
+</html>
+
+<!-- **Example:** Below-the-fold images load lazily, dimensions reserve space, and a script runs after parsing without blocking document parsing. -->
+<!-- **Use / do not use:** Use `lazy` for non-critical content, `preload` only for truly critical resources, and `preconnect` only for origins you will contact. Do not lazy-load the main above-the-fold image by default. -->
+<!-- **Write yourself:** Audit one page for blocking resources, image dimensions, lazy loading, preconnect, and unnecessary preload. Record a before/after hypothesis. -->
